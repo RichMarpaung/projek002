@@ -48,13 +48,14 @@
                                     <td>{{ $item->stock }}</td>
                                     <td>{{ $item->description }}</td>
                                     <td class="text-end">
-                                        <a href="/admin/edit-rental"><i class="las la-pen text-secondary font-16"></i></a>
-                                        {{-- <form action="/delete/{{ $item->id }}" method="POST"class="m-2">
+                                        <a href="{{ route('admin.product.edit', $item->id) }}"><i class="las la-pen text-secondary font-16"></i></a>
+                                        <form action="{{ route('admin.product.delete', $item->id) }}" method="POST" class="d-inline m-2">
                                             @csrf
-                                            @method('delete')
-                                            <button type="submit" class="btn btn-danger">Hapus</button>
-                                        </form> --}}
-                                        <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                            @method('POST')
+                                            <button type="submit" class="btn p-0 border-0 bg-transparent">
+                                                <i class="las la-trash-alt text-secondary font-16"></i>
+                                            </button>
+                                        </form>
                                     </td>
 
                                 </tr>

@@ -59,15 +59,19 @@
                             <i class="icofont-sun light-mode"></i>
                         </a>
                     </li>
+                    <li class="topbar-item">
+                        <a class="nav-link nav-icon" href="{{ route('logout') }}" >
+                            <i class="las la-power-off text-danger "></i>
+                        </a>
+                    </li>
 
 
-
-                    <li class="dropdown topbar-item">
+                    {{-- <li class="dropdown topbar-item">
                         <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#"
                             role="button" aria-haspopup="false" aria-expanded="false">
                             <img src="{{ asset('assets/images/users/avatar-1.jpg') }}" alt=""
                                 class="thumb-lg rounded-circle">
-                        </a>
+
                         <div class="dropdown-menu dropdown-menu-end py-0">
                             <div class="d-flex align-items-center dropdown-item py-2 bg-secondary-subtle">
                                 <div class="flex-shrink-0">
@@ -96,7 +100,7 @@
                             <a class="dropdown-item text-danger" href="/login"><i
                                     class="las la-power-off fs-18 me-1 align-text-bottom"></i> Login</a>
                         </div>
-                    </li>
+                    </li> --}}
                 </ul><!--end topbar-nav-->
             </nav>
             <!-- end navbar-->
@@ -107,7 +111,7 @@
     <div class="startbar d-print-none">
         <!--start brand-->
         <div class="brand">
-            <a href="index.html" class="logo">
+            <a href="{{ route('admin.dashboard') }}" class="logo">
                 <span>
                     <img src="{{ asset('assets/images/icon1.png') }}" alt="logo-small" class="logo-sm">
                 </span>

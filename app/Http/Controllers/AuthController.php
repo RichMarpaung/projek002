@@ -33,7 +33,7 @@ class AuthController extends Controller
             if ($user->role_id == 1) {
                 return redirect()->intended('/admin/dashboard');
             } else {
-                return redirect()->intended('/landing');
+                return redirect()->intended('/');
                 }
             // // return redirect()->intended('/dashboard');
 

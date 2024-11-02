@@ -19,9 +19,9 @@ Route::get('/', function () {
 })->name('landing');
 
 
-// Route::get('/cek', function () {
-//     return view('paymentpage');
-// })->name('order.confirmation');
+Route::get('/cek', function () {
+    return view('paymentpage');
+})->name('order.confirmation');
 
 Route::post('/order/confirmation', [PaymentController::class, 'show'])->name('order.confirmation');
 
@@ -43,4 +43,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/rental',[AdminController::class, 'productlist'])->name('product.list');
     Route::get('/create-rental',[AdminController::class, 'productcreate'])->name('product.create');
     Route::post('/create-rental',[ProductController::class, 'store'])->name('product.store');
+    Route::get('/edit/{id}',[ProductController::class, 'edit'])->name('product.edit');
+    Route::post('/update/{id}',[ProductController::class, 'update'])->name('product.update');
+    Route::post('/delete/{id}',[ProductController::class, 'destroy'])->name('product.delete');
 })->middleware(['auth',Mustadmin::class]);

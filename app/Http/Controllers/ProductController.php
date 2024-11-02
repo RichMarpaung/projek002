@@ -8,6 +8,7 @@ use App\Http\Requests\UpdateProductRequest;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -77,10 +78,41 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update()
+    public function update(Request $request, $id)
     {
-        //
+        // Temukan produk berdasarkan ID
+        $product = Product::findOrFail($id);
+
+        // Validasi input
+        $validated = $request->validate([
+            'category_id' => 'required',
+            'name' => 'required',
+            'image' => 'image|file|max:2048|mimes:png,jpeg,jpg',
+            'description' => 'required',
+            'fuel' => 'required',
+            'transmission' => 'required',
+            'seats' => 'required',
+            'price' => 'required',
+            'stock' => 'required',
+        ]);
+
+        // Jika ada file gambar baru, simpan dan hapus gambar lama
+        if ($request->file('image')) {
+            // Hapus gambar lama jika ada
+            if ($product->image) {
+                Storage::delete($product->image);
+            }
+            // Simpan gambar baru
+            $validated['image'] = $request->file('image')->store('product/image_path');
+        }
+
+        // Update data produk
+        $product->update($validated);
+
+        // Redirect ke halaman daftar produk
+        return redirect(route('admin.product.list'))->with('success', 'Data produk berhasil diperbarui');
     }
+
 
     /**
      * Remove the specified resource from storage.
