@@ -228,10 +228,7 @@
                             <div class="collapse " id="sidebarCharts">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="charts-apex.html">Apex</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="charts-justgage.html">JustGage</a>
+                                        <a class="nav-link" href="{{ route('admin.payment.show') }}">List</a>
                                     </li><!--end nav-item-->
 
                                 </ul><!--end nav-->
@@ -267,6 +264,8 @@
     <script src="{{ asset('assets/libs/jsvectormap/maps/world.js') }}"></script>
     <script src="{{ asset('assets/js/pages/index.init.js') }}"></script>
     <script src="{{ asset('assets/js/app.js') }}"></script>
+    <script src="{{ asset('assets/libs/chart.js/chart.min.js') }}"></script>
+    <script src="{{ asset('assets/js/pages/chartjs.init.js') }}"></script>
 </body>
 <!--end body-->
 

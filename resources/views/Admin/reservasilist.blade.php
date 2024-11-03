@@ -66,8 +66,7 @@
                                     </td>
                                     <td class="text-end">
                                         <a href="#"><i class="las la-info-circle text-secondary fs-18"></i></a>
-                                        <a href="#"><i class="las la-pen text-secondary fs-18"></i></a>
-                                        <a href="#"><i class="las la-trash-alt text-secondary fs-18"></i></a>
+                                        <a href="{{ route('admin.reservation.edit', $item->id) }}"><i class="las la-pen text-secondary font-16 text-info"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach

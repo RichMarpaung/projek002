@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Reservation;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreReservationRequest;
 use App\Http\Requests\UpdateReservationRequest;
-use Illuminate\Support\Facades\Request;
+use App\Models\Reservation;
+use Illuminate\Http\Request;
 
 class ReservationController extends Controller
 {
@@ -45,9 +46,10 @@ class ReservationController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Reservation $reservation)
+    public function edit($id)
     {
-        //
+        $reservation = Reservation::findOrFail($id);
+        return view('admin.editreservation', compact('reservation'));
     }
 
     /**
@@ -55,7 +57,23 @@ class ReservationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'status' => 'required|string|max:255',
+        ]);
+
+        // Cari user berdasarkan ID
+        $reservation = Reservation::findOrFail($id);
+
+        // Update data reservation
+        $reservation->status = $request->input('status');
+
+
+        // Update password hanya jika ada input baru
+
+        // Simpan perubahan ke database
+        $reservation->save();
+        // Redirect ke halaman daftar produk
+        return redirect(route('admin.reservasi.list'))->with('success', 'Data produk berhasil diperbarui');
     }
 
     /**

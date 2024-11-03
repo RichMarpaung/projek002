@@ -16,6 +16,7 @@ use Illuminate\Support\Str;
 class PaymentController extends Controller
 {
 
+
     public function confirmBooking(Request $request)
     {
         $product = Product::findorFail($request->input('product_id'));
@@ -90,14 +91,19 @@ class PaymentController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show() {}
+    public function show() {
+        $payment = Payment::all();
+        $totalPayment = $payment->sum('total_payment');
+
+        return view('admin.paymentlist',compact('payment','totalPayment'));
+    }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit()
+    public function edit($id)
     {
-        //
+
     }
 
     /**
