@@ -179,34 +179,25 @@
                         <div class="menu-right-content">
 
                             <div class="support-box">
-                                <figure class="logo-box"><a href="index-2.html">
+                                <figure class="logo-box"><a href="{{ route('landing') }}">
                                     <img src="{{ asset('assets/images/icon2.png') }}" alt=""></a></figure>
                             </div>
                         </div>
                         <div class="menu-area">
                             <!--Mobile Navigation Toggler-->
-                            <div class="mobile-nav-toggler">
+                            {{-- <div class="mobile-nav-toggler">
                                 <i class="icon-bar"></i>
                                 <i class="icon-bar"></i>
                                 <i class="icon-bar"></i>
-                            </div>
+                            </div> --}}
                             <nav class="main-menu navbar-expand-md navbar-light clearfix">
                                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
-                                        <li><a href="/">Home</a></li>
+                                        <li><a href="{{ route('landing') }}">Home</a></li>
                                         <li><a href="#about">About Us</a></li>
+                                        <li><a href="#layanan">Layanan</a></li>
 
-
-
-                                        <li class="current dropdown"><a href="#layanan">Layanan</a>
-                                            <ul>
-                                                <li><a href="/rental">Transportasi</a></li>
-                                                <li><a href="#">Akomodasi</a></li>
-                                                <li><a href="#">Makanan Khas</a></li>
-                                                <li><a href="#">Aksesoris</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">Blog</a></li>
+                                        <li><a href="#contact">Contact</a></li>
                                     </ul>
                                 </div>
                             </nav>
@@ -270,7 +261,7 @@
 
 
         <!-- main-footer -->
-        <footer class="main-footer dark-footer">
+        <footer class="main-footer dark-footer" >
             <div class="auto-container">
                 <div class="widget-section pt_95 pb_95">
                     <div class="row clearfix">

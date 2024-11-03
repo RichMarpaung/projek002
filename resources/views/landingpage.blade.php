@@ -71,7 +71,7 @@
 
             <section class="service-section centred pt_0 pb_100" >
                 <div class="auto-container">
-                    <div class="inner-container" id="#layanan">
+                    <div class="inner-container" id="layanan">
                         <div class="row clearfix">
                             <div class="col service-block" style="flex: 0 0 20%; max-width: 20%;">
                                 <div class="service-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
@@ -156,10 +156,10 @@
 
 
             <!-- about-style-two -->
-            <section class="about-style-two centred pb_140" id="#about">
+            <section class="about-style-two centred pb_140" id="about">
                 <div class="auto-container">
                     <div class="content-box">
-                        <div class="sec-title centred mb_35">
+                        <div class="sec-title centred mb_35" >
                             {{-- <div class="icon-box"><i class="icon-2"></i></div>  --}}
                             <span class="sub-title">About Mamasa</span>
                             <h2>Welcome to Mamasa </h2>
@@ -349,7 +349,7 @@
 
 
             <!-- contact-info-section -->
-            <section class="contact-info-section centred pt_100">
+            <section class="contact-info-section centred pt_100" id="contact">
                 <div class="auto-container">
                     <div class="sec-title centred mb_40">
                         <span class="sub-title">Contact us</span>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-startbar="light" data-bs-theme="light">
+<html lang="en" dir="ltr" data-startbar="dark" data-bs-theme="dark">
 
 <head>
 
@@ -149,7 +149,10 @@
                             <div class="collapse " id="sidebarApplications">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="apps-contact-list.html">List</a>
+                                        <a class="nav-link" href="{{ route('admin.user.list') }}">List</a>
+                                    </li><!--end nav-item-->
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('admin.user.create') }}">Add</a>
                                     </li><!--end nav-item-->
                                 </ul><!--end nav-->
                             </div><!--end startbarApplications-->
@@ -170,10 +173,10 @@
                             <div class="collapse " id="sidebarElements">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="ui-alerts.html">List</a>
+                                        <a class="nav-link" href="{{ route('admin.category.list') }}">List</a>
                                     </li><!--end nav-item-->
                                     <li class="nav-item">
-                                        <a class="nav-link" href="ui-avatar.html">Add Category</a>
+                                        <a class="nav-link" href="{{ route('admin.category.create') }}">Add Category</a>
                                     </li><!--end nav-item-->
 
                                 </ul><!--end nav-->
@@ -264,6 +267,5 @@
 <!--end body-->
 
 
-<!-- Mirrored from mannatthemes.com/rizz/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Oct 2024 04:53:54 GMT -->
 
 </html>

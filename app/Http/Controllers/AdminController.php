@@ -9,6 +9,8 @@ use App\Models\Product;
 use App\Models\Reservation;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
 {
@@ -37,6 +39,40 @@ class AdminController extends Controller
     {
         $products = Product::all();
         return view('Admin.productlist',compact('products'));
+    }
+
+    public function upload(Request $request)
+    {
+        $validasi = $request->validate(
+            ['name'=>'required',
+            'phone'=>'required',
+            'email' => 'required',
+            'password'=> 'required',
+            'role_id'=> 'required',
+            'confirm_password' => 'required',
+        ]);
+        if(!$validasi ){
+            Session::flash('status', 'field');
+            Session::flash('massage', 'Periksa Data Anda Kembali');
+            return redirect(route('admin.user.create'))->with('Gagal', 'Data gagal ');
+            // return view('loginPage.register');
+        }
+        if($request->password != $request->confirm_password){
+            Session::flash('status', 'field');
+            Session::flash('massage', 'Password tidak sama !!');
+            return redirect(route('admin.user.create'))->with('Gagal', 'Data gagal ');
+            // return view('loginPage.register');
+        }
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'role_id' => $request->role_id,
+            'password' =>Hash::make($request->password) ,
+        ]);
+        Session::flash('status', 'success');
+        Session::flash('massage', 'Akun Berhasil Didaftarkan Silahkan Login!');
+        return redirect(route('admin.user.list'))->with('success', 'Data produk berhasil diperbarui');
     }
     public function index()
     {

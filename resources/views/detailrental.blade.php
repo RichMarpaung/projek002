@@ -25,11 +25,10 @@
                                     {{ $product->description }}
                                 </p>
                             </div>
-                            <form action="{{ route('order.confirmation') }}" method="POST">
-                                @csrf
-                                <input type="hidden" name="user_id" value="1"> <!-- User ID -->
-                                <input type="hidden" name="product_id" value="{{ $product->id }}"> <!-- Product ID -->
 
+                            <form action="{{ route('order.confirmation') }}" method="POST">
+                                <input type="hidden" name="product_id" value="{{ $product->id }}"> <!-- Product ID -->
+                                @csrf
                             <ul class="addto-cart-box mb_40">
                                 <li class="item-date">
                                     <label for="start_date">Start Date:</label>
@@ -60,6 +59,7 @@
                         </form>
                         </div>
                     </div>
+
                 </div>
             </div>
 

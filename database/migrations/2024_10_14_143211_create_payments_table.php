@@ -19,7 +19,6 @@ return new class extends Migration
             $table->date('akhir_sewa');
             $table->decimal('total_payment', 10, 2);
             $table->string('jaminan');
-            $table->string('status');
 
             $table->timestamps();
         });
