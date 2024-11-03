@@ -12,4 +12,5 @@ class Reservation extends Model
     {
         return $this->belongsTo(Payment::class);
     }
+    protected $guarded = ['id'];
 }

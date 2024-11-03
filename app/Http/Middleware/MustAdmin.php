@@ -16,7 +16,7 @@ class MustAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(Auth::user()->role_id != 1){
+        if(Auth::user()->role_id != 1 && Auth::user()->role_id != 3){
             abort(404);
         }
         return $next($request);

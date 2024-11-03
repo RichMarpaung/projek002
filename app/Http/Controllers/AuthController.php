@@ -30,8 +30,8 @@ class AuthController extends Controller
 
             $user = Auth::user();
             // Check the user's role and redirect accordingly
-            if ($user->role_id == 1) {
-                return redirect()->intended('/admin/dashboard');
+            if ($user->role_id == 1 || $user->role_id ==3 ) {
+                return redirect()->intended('/admin');
             } else {
                 return redirect()->intended('/');
                 }

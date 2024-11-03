@@ -7,9 +7,12 @@
                 <div class="billing-content">
                     <h3>Billing Details</h3>
                     <div class="form-inner">
-                        <form method="post" action="">
+                        <form method="post" action="{{ route('order.process') }}" enctype="multipart/form-data">
                             @csrf
-                            <input type="hidden" name="user_id" value="{{ $bookingDetails['user_id'] ?? '' }}" disabled>
+                            <input type="hidden" name="user_id" value="{{ $bookingDetails['user_id'] ?? '' }}">
+                            <input type="hidden" name="product_id" value="{{ $product->id }}">
+                            <input type="hidden" name="total_price" value="{{ $bookingDetails['total_price'] ?? 0 }}">
+
                             <div class="row clearfix">
                                 <div class="col-lg-6 col-md-6 col-sm-12 field-column">
                                     <div class="form-group">
@@ -26,19 +29,19 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12 field-column">
                                     <div class="form-group">
                                         <label>Start Rent<span>*</span></label>
-                                        <input type="date" name="date-start" value="{{ $bookingDetails['time-start'] ?? '' }}" disabled>
+                                        <input type="date" name="date_start" value="{{ $bookingDetails['time-start'] ?? '' }}" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 field-column">
                                     <div class="form-group">
                                         <label>End Rent<span>*</span></label>
-                                        <input type="date" name="date-end" value="{{ $bookingDetails['time-end'] ?? '' }}" disabled>
+                                        <input type="date" name="date_end" value="{{ $bookingDetails['time-end'] ?? '' }}" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 field-column">
                                     <div class="form-group">
                                         <label>Phone Number<span>*</span></label>
-                                        <input type="text" name="phone" value="{{ $bookingDetails['phone'] ?? '' }}">
+                                        <input type="text" name="phone" value="{{ $bookingDetails['phone'] ?? '' }}" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 field-column">
@@ -47,9 +50,10 @@
                                         <input type="file" name="jaminan_ktp" accept="image/*" required>
                                     </div>
                                 </div>
-                                {{-- <div class="btn-box pt_50">
-                                    <button type="submit" class="theme-btn btn-one">Make Payment</button>
-                                </div> --}}
+                            </div>
+
+                            <div class="btn-box pt_50">
+                                <button type="submit" class="theme-btn btn-one">Make Payment</button>
                             </div>
                         </form>
                     </div>
@@ -63,31 +67,24 @@
                     <div class="order-info">
                         <div class="title-box mb_20">
                             <span class="text">Products</span>
-                            <span class="text">total</span>
+                            <span class="text">Total</span>
                         </div>
                         <div class="order-product">
                             <div class="single-item">
                                 <div class="product-box">
-                                    <h6>{{ $product->name }} </h6>
+                                    <h6>{{ $product->name }}</h6>
                                 </div>
                                 <h4>Rp. {{ $product->price }}</h4>
                             </div>
-
                         </div>
                         <ul class="cost-box">
                             <li><h6>Hari</h6><span class="color">X {{ $bookingDetails['days'] }}</span></li>
                             <li><h4>Total</h4><span class="color">Rp. {{ $bookingDetails['total_price'] }}</span></li>
                         </ul>
-
-
-                        <div class="btn-box pt_20">
-                            <button type="submit" class="theme-btn btn-one">Make Payment</button>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 @endsection

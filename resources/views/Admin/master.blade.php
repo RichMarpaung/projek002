@@ -60,7 +60,7 @@
                         </a>
                     </li>
                     <li class="topbar-item">
-                        <a class="nav-link nav-icon" href="{{ route('logout') }}" >
+                        <a class="nav-link nav-icon" href="{{ route('logout') }}">
                             <i class="las la-power-off text-danger "></i>
                         </a>
                     </li>
@@ -134,28 +134,30 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('admin.dashboard') }}" >
+                            <a class="nav-link" href="{{ route('admin.dashboard') }}">
                                 <i class="iconoir-home-simple menu-icon"></i>
                                 <span>Dashboards</span>
                             </a>
 
                         </li><!--end nav-item-->
                         <li class="nav-item">
-                            <a class="nav-link" href="#sidebarApplications" data-bs-toggle="collapse" role="button"
-                                aria-expanded="false" aria-controls="sidebarApplications">
-                                <i class="iconoir-profile-circle menu-icon"></i>
-                                <span>User</span>
-                            </a>
-                            <div class="collapse " id="sidebarApplications">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('admin.user.list') }}">List</a>
-                                    </li><!--end nav-item-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('admin.user.create') }}">Add</a>
-                                    </li><!--end nav-item-->
-                                </ul><!--end nav-->
-                            </div><!--end startbarApplications-->
+                            @if (Auth::user()->role->name === 'admin')
+                                <a class="nav-link" href="#sidebarApplications" data-bs-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="sidebarApplications">
+                                    <i class="iconoir-profile-circle menu-icon"></i>
+                                    <span>User</span>
+                                </a>
+                                <div class="collapse" id="sidebarApplications">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('admin.user.list') }}">List</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('admin.user.create') }}">Add</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            @endif
                         </li><!--end nav-item-->
                         <li class="menu-label mt-2">
                             <small class="label-border">
@@ -176,7 +178,8 @@
                                         <a class="nav-link" href="{{ route('admin.category.list') }}">List</a>
                                     </li><!--end nav-item-->
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('admin.category.create') }}">Add Category</a>
+                                        <a class="nav-link" href="{{ route('admin.category.create') }}">Add
+                                            Category</a>
                                     </li><!--end nav-item-->
 
                                 </ul><!--end nav-->
@@ -194,7 +197,8 @@
                                         <a class="nav-link" href="{{ route('admin.product.list') }}">List</a>
                                     </li><!--end nav-item-->
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('admin.product.create') }}">Add Product</a>
+                                        <a class="nav-link" href="{{ route('admin.product.create') }}">Add
+                                            Product</a>
                                     </li><!--end nav-item-->
 
                                 </ul><!--end nav-->
@@ -209,7 +213,7 @@
                             <div class="collapse " id="sidebarForms">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="forms-elements.html">List</a>
+                                        <a class="nav-link" href="{{ route('admin.reservasi.list') }}">List</a>
                                     </li><!--end nav-item-->
 
                                 </ul><!--end nav-->
@@ -255,7 +259,7 @@
     <script src="{{ asset('assets/libs/simplebar/simplebar.min.js') }}"></script>
 
     <script src="{{ asset('assets/libs/simple-datatables/umd/simple-datatables.js') }}"></script>
-        <script src="{{ asset('assets/js/pages/datatable.init.js') }}"></script>
+    <script src="{{ asset('assets/js/pages/datatable.init.js') }}"></script>
 
     <script src="{{ asset('assets/libs/apexcharts/apexcharts.min.js') }}"></script>
     <script src="{{ asset('assets/data/stock-prices.js') }}"></script>

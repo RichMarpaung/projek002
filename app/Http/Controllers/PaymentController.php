@@ -7,10 +7,11 @@ use App\Http\Requests\StorePaymentRequest;
 use App\Http\Requests\UpdatePaymentRequest;
 use App\Models\Payment;
 use App\Models\Product;
+use App\Models\Reservation;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Str;
 
 class PaymentController extends Controller
 {
@@ -27,6 +28,8 @@ class PaymentController extends Controller
         $bookingDetails = [
             'name' => Auth::user()->name,
             'email' => Auth::user()->email,
+            'time-start'=>$request->input('start_date'),
+            'time-end'=>$request->input('end_date'),
             'phone' => Auth::user()->phone ?? '-',
             'product_id' => $product->id,
             'user_id' => Auth::id(),
@@ -37,23 +40,6 @@ class PaymentController extends Controller
         ];
         // Redirect to checkout view with the booking details
         return view('paymentpage', compact('bookingDetails', 'product'));
-    }
-    public function processPayment(Request $request)
-    {
-        // Validate and store the uploaded file
-        $request->validate([
-            'jaminan_ktp' => 'required|image|mimes:jpeg,png,jpg|max:2048', // Adjust max size as needed
-        ]);
-
-        // Store the uploaded file
-        if ($request->hasFile('jaminan_ktp')) {
-            $path = $request->file('jaminan_ktp')->store('jaminan_ktp', 'public');
-        }
-
-        // Process payment or further booking logic here
-        // Pass $path to store the file path or any other required processing
-
-        return redirect()->route('checkout.confirmation')->with('success', 'Booking confirmed');
     }
 
     public function index()
@@ -74,7 +60,31 @@ class PaymentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'phone' => 'required|string',
+            'jaminan_ktp' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'product_id' => 'required|exists:products,id',
+        ]);
+
+        $jaminanPath = $request->file('jaminan_ktp')->store('jaminan', 'public');
+
+        $payment = Payment::create([
+            'user_id' => Auth::id(),
+            'product_id' => $request->product_id,
+            'awal_sewa' => $request->date_start,
+            'akhir_sewa' => $request->date_end,
+            'total_payment' => $request->total_price,
+            'jaminan' => $jaminanPath,
+        ]);
+
+        $reservation = Reservation::create([
+            'payment_id' => $payment->id,
+            'code_reservasi' => Str::upper(Str::random(10)),
+            'status' => 'Pending',
+        ]);
+
+        return redirect()->route('admin.dashboard');
+
     }
 
     /**
