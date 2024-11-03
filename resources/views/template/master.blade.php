@@ -203,23 +203,10 @@
                             </nav>
                         </div>
                         <div class="menu-right-content">
-                            {{-- <form action="{{ route('logout') }}" method="GET" style="display: inline;" onsubmit="return confirm('Are you sure you want to logout?');">
-                                @csrf
-                                <button type="submit" class="btn btn-danger">Logout</button>
-                            </form> --}}
-                            <a class="dropdown-item {{ auth()->check() ? 'text-danger' : 'text-info' }}" href="{{ auth()->check() ? route('logout') : route('login') }}"
-                                onclick="{{ auth()->check() ? 'event.preventDefault(); document.getElementById(\'logout-form\').submit();' : '' }}">
-                                 <i class="las la-power-off fs-18 me-1 align-text-bottom"></i>
-                                 {{ auth()->check() ? 'Logout' : 'Login' }}
-                             </a>
-
-                             @if(auth()->check())
-                                 <form id="logout-form" action="{{ route('logout') }}" method="get" style="display: none;">
-                                     @csrf
-                                 </form>
-                             @endif
-
-                            {{-- <div class="btn-box"><a href="" class="theme-btn btn-one">Login</a></div> --}}
+                            <a class="dropdown-item" href="{{ auth()->check() ? route('profile') : route('login') }}">
+                                <i class="las la-user fs-18 me-1 align-text-bottom"></i>
+                                {{ auth()->check() ? 'Profile' : 'Login' }}
+                            </a>
                         </div>
                     </div>
                 </div>

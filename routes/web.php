@@ -29,6 +29,7 @@ Route::post('/order/process', [PaymentController::class, 'store'])->name('order.
 Route::get('/rental',[RentalController::class, 'list'])->name('product.list');
 Route::get('/detail/{id}', [ProductController::class, 'show'])->name('product.show');
 
+Route::get('/profile', [AuthController::class, 'profile'])->name('profile')->middleware('auth');
 //Auth Part
 Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'authlogin'])->name('authlogin');

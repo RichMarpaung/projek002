@@ -29,6 +29,7 @@
                                 <th>Akhir Sewa</th>
                                 <th>Status</th>
                                 <th>Pengembalian</th>
+                                <th>Jaminan</th>
                                 <th class="text-end">Action</th>
                               </tr>
                             </thead>
@@ -64,8 +65,13 @@
                                             <span class="badge bg-success-subtle text-success">Masih Berlaku</span>
                                         @endif
                                     </td>
+                                    <td>
+                                        <img src="{{ asset('storage/'.$item->payment->jaminan) }}" alt="Tidak Ada " style="max-width: 100px; max-height: 100px;">
+
+                                    </td>
                                     <td class="text-end">
-                                        <a href="#"><i class="las la-info-circle text-secondary fs-18"></i></a>
+
+                                        <a href="{{ asset('storage/'.$item->payment->jaminan) }}"><i class="las la-info-circle text-secondary fs-18"></i></a>
                                         <a href="{{ route('admin.reservation.edit', $item->id) }}"><i class="las la-pen text-secondary font-16 text-info"></i></a>
                                     </td>
                                 </tr>
@@ -78,4 +84,6 @@
         </div> <!-- end col -->
     </div> <!-- end row -->
 </div>
+
+
 @endsection
