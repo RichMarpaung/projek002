@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+use App\Models\Payment;
+use App\Models\Reservation;
+use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Session;
-use Illuminate\Contracts\Auth\Authenticatable;
+
 class AuthController extends Controller
 {
     public function login()
@@ -17,9 +21,15 @@ class AuthController extends Controller
 
 
     public function profile()
-    {
+    {    $userId = Auth::user()->id;
+        $payments = Payment::where('user_id', $userId)->get();
+        // Ambil reservasi berdasarkan ID pengguna yang sedang login
+        $paymentIds = $payments->pluck('id'); // Ambil ID pembayaran sebagai koleksi
 
-        return view('profile');
+        // Ambil reservasi yang memiliki ID pembayaran yang diambil sebelumnya
+        $reservations = Reservation::whereIn('payment_id', $paymentIds)->get();
+        // Kembalikan view dengan data reservasi
+        return view('profile', compact('reservations'));
     }
 
     public function authlogin(Request $request)

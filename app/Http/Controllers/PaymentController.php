@@ -84,7 +84,7 @@ class PaymentController extends Controller
             'status' => 'Pending',
         ]);
 
-        return redirect()->route('admin.dashboard');
+        return redirect()->route('profile');
 
     }
 

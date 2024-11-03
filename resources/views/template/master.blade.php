@@ -12,7 +12,7 @@
 
     <!-- Fav Icon -->
     <link rel="icon" href=" {{ asset('assets/images/icon1.png') }}" type="image/x-icon">
-
+@yield('style')
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap"
