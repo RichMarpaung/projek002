@@ -34,6 +34,12 @@
                                 <button type="submit" class="btn btn-danger d-inline-block">Log Out</button>
                             </form>
                         </div>
+                        <div class="col align-self-center">
+                            @if (Auth::user()->role->name === 'admin')
+                             <a href="{{ route('admin.dashboard') }}">  <button type="submit" class="btn btn-info d-inline-block">Dashboard</button>
+                             </a>
+                             @endif
+                        </div>
                     </div><!--end row-->
                 </div><!--end card-body-->
             </div><!--end card-->
