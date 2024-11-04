@@ -40,7 +40,7 @@
                             <div class="content-box">
                                 <span class="upper-text">MAMASA</span>
                                 <h2>MESA KADA DIPOTUO, PANTAN KADA DIPOMATE</h2>
-                                <div class="btn-box"><a href="index-2.html" class="theme-btn btn-one">Learn More</a></div>
+                                <div class="btn-box"><a href="#about" class="theme-btn btn-one">Learn More</a></div>
                             </div>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
                             <div class="content-box">
                                 <span class="upper-text">Selamat datang di MAMASA</span>
                                 <h2>Surga tersembunyi yang menunggu untuk dijelajahi</h2>
-                                <div class="btn-box"><a href="index-2.html" class="theme-btn btn-one">Learn More</a></div>
+                                <div class="btn-box"><a href="#about" class="theme-btn btn-one">Learn More</a></div>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                             <div class="content-box">
                                 <span class="upper-text">DI MAMASA</span>
                                 <h2>Temukan kenyamanan dalam setiap langkah perjalanan Anda</h2>
-                                <div class="btn-box"><a href="index-2.html" class="theme-btn btn-one">Learn More</a></div>
+                                <div class="btn-box"><a href="#about" class="theme-btn btn-one">Learn More</a></div>
                             </div>
                         </div>
                     </div>
