@@ -40,10 +40,10 @@
         </div> <!--end col-->
         {{-- <div class="col-md-6 col-lg-6"> --}}
             <div class="card">
-                <div class="card-header">
+                <div class="card-header mb-3  ">
                     <div class="row align-items-center">
                         <div class="col">
-                            <h4 class="card-title">Bordered Table</h4>
+                            <h4 class="card-title">Reservasi Table</h4>
                         </div><!--end col-->
                     </div>  <!--end row-->
                 </div><!--end card-header-->

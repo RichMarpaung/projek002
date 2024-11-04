@@ -66,6 +66,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     //Reservasi Part
     Route::get('/reservasi',[ReservationController::class, 'show'])->name('reservasi.list')->middleware(['auth','must_admin']);
+    Route::get('/invoice/{id}',[ReservationController::class, 'invoice'])->name('reservasi.invoice')->middleware(['auth','must_admin']);
     Route::get('/edit/{id}/reservation',[ReservationController::class, 'edit'])->name('reservation.edit')->middleware(['auth','must_admin']);
     Route::post('/update/{id}/reservation',[ReservationController::class, 'update'])->name('reservation.update')->middleware(['auth','must_admin']);
     Route::post('/delete/{id}/reservation',[ReservationController::class, 'destroy'])->name('reservation.delete')->middleware(['auth','must_admin']);

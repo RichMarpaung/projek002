@@ -66,12 +66,13 @@
                                         @endif
                                     </td>
                                     <td>
+                                        <a href="{{ asset('storage/'.$item->payment->jaminan) }}">
                                         <img src="{{ asset('storage/'.$item->payment->jaminan) }}" alt="Tidak Ada " style="max-width: 100px; max-height: 100px;">
-
+                                    </a>
                                     </td>
                                     <td class="text-end">
 
-                                        <a href="{{ asset('storage/'.$item->payment->jaminan) }}"><i class="las la-info-circle text-secondary fs-18"></i></a>
+                                        <a href="{{ route('admin.reservasi.invoice',$item->id) }}"><i class="las la-info-circle text-secondary fs-18"></i></a>
                                         <a href="{{ route('admin.reservation.edit', $item->id) }}"><i class="las la-pen text-secondary font-16 text-info"></i></a>
                                     </td>
                                 </tr>

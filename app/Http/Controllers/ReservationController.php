@@ -7,6 +7,7 @@ use App\Http\Requests\StoreReservationRequest;
 use App\Http\Requests\UpdateReservationRequest;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class ReservationController extends Controller
 {
@@ -50,6 +51,17 @@ class ReservationController extends Controller
     {
         $reservation = Reservation::findOrFail($id);
         return view('admin.editreservation', compact('reservation'));
+    }
+
+    public function invoice($id)
+    {
+
+        $invoice = Reservation::findOrFail($id);
+        $awal_sewa = Carbon::parse($invoice->payment->awal_sewa);
+        $akhir_sewa = Carbon::parse($invoice->payment->akhir_sewa);
+
+        $days = $awal_sewa->diffInDays($akhir_sewa);
+        return view('admin.invoice', compact('invoice','days'));
     }
 
     /**

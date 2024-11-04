@@ -67,7 +67,7 @@
                                         <td>{{ $item->user->phone }}</td>
                                         <td>{{ $item->awal_sewa }}</td>
                                         <td>{{ $item->akhir_sewa}}</td>
-                                        <td>{{ $item->total_payment}}</td>
+                                        <td>{{ number_format($item->total_payment, 0, ',', '.') }}</td>
 
 
 

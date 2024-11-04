@@ -194,8 +194,8 @@
                                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
                                         <li><a href="{{ route('landing') }}">Home</a></li>
-                                        <li><a href="#about">About Us</a></li>
-                                        <li><a href="#layanan">Layanan</a></li>
+                                        <li><a href="/#about">About Us</a></li>
+                                        <li><a href="/#layanan">Layanan</a></li>
 
                                         <li><a href="#contact">Contact</a></li>
                                     </ul>
@@ -227,17 +227,10 @@
                         </div>
                         <div class="menu-right-content">
                             {{-- <div class="btn-box"><a href="index-2.html" class="theme-btn btn-one">Login</a></div> --}}
-                            <a class="dropdown-item {{ auth()->check() ? 'text-danger' : 'text-info' }}" href="{{ auth()->check() ? route('logout') : route('login') }}"
-                                onclick="{{ auth()->check() ? 'event.preventDefault(); document.getElementById(\'logout-form\').submit();' : '' }}">
-                                 <i class="las la-power-off fs-18 me-1 align-text-bottom"></i>
-                                 {{ auth()->check() ? 'Logout' : 'Login' }}
-                             </a>
-
-                             @if(auth()->check())
-                                 <form id="logout-form" action="{{ route('logout') }}" method="get" style="display: none;">
-                                     @csrf
-                                 </form>
-                             @endif
+                            <a class="dropdown-item" href="{{ auth()->check() ? route('profile') : route('login') }}">
+                                <i class="las la-user fs-18 me-1 align-text-bottom"></i>
+                                {{ auth()->check() ? 'Profile' : 'Login' }}
+                            </a>
                         </div>
                     </div>
                 </div>
