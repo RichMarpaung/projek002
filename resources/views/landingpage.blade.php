@@ -19,11 +19,11 @@
                     </div>
                     <div class="social-links">
                         <ul class="clearfix">
-                            <li><a href="index-2.html"><span class="fab fa-twitter"></span></a></li>
-                            <li><a href="index-2.html"><span class="fab fa-facebook-square"></span></a></li>
-                            <li><a href="index-2.html"><span class="fab fa-pinterest-p"></span></a></li>
-                            <li><a href="index-2.html"><span class="fab fa-instagram"></span></a></li>
-                            <li><a href="index-2.html"><span class="fab fa-youtube"></span></a></li>
+                            <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                            <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
+                            <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+                            <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                            <li><a href="#"><span class="fab fa-youtube"></span></a></li>
                         </ul>
                     </div>
                 </nav>
@@ -81,7 +81,7 @@
                                         </div>
                                         <div class="lower-content">
                                             <h3><a href="#">Akomodasi</a></h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+                                            <p>Kami menyediakan liburan lengkap, dari wisata alam indah hingga penginapan mewah.</p>
                                             <div class="link"><a href="#"><i class="icon-7"></i></a></div>
                                         </div>
                                     </div>
@@ -96,7 +96,7 @@
                                         </div>
                                         <div class="lower-content">
                                             <h3><a href="#">Kuliner</a></h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+                                            <p>Nikmati kelezatan kuliner khas yang memadukan cita rasa otentik dengan sentuhan modern.</p>
                                             <div class="link"><a href="#"><i class="icon-7"></i></a></div>
                                         </div>
                                     </div>
@@ -111,7 +111,7 @@
                                         </div>
                                         <div class="lower-content">
                                             <h3><a href="{{ route('product.list') }}">Transportasi</a></h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+                                            <p>Kami menyediakan berbagai pilihan transportasi yang siap menemani perjalanan Anda.</p>
                                             <div class="link"><a href="{{ route('product.list') }}"><i class="icon-7"></i></a></div>
                                         </div>
                                     </div>
@@ -126,7 +126,7 @@
                                         </div>
                                         <div class="lower-content">
                                             <h3><a href="#">Souvenir</a></h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+                                            <p>Jelajahi kerajinan tangan bernilai seni dan budaya, dari produk tradisional otentik.</p>
                                             <div class="link"><a href="#"><i class="icon-7"></i></a></div>
                                         </div>
                                     </div>
@@ -141,7 +141,8 @@
                                         </div>
                                         <div class="lower-content">
                                             <h3><a href="#">Hiburan</a></h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+                                            <p>
+                                                Nikmati hiburan seru dan penuh kebersamaan, dari pertunjukan hingga aktivitas interaktif.</p>
                                             <div class="link"><a href="#"><i class="icon-7"></i></a></div>
                                         </div>
                                     </div>
@@ -192,12 +193,12 @@
                                         <span class="year">Wisata / Akomodasi</span>
                                         <h2>Destinasi Wisata & Penginapan</h2>
                                         <p>Kami menawarkan pengalaman liburan yang menyeluruh, mulai dari wisata alam yang menakjubkan hingga penginapan yang nyaman dan mewah. Temukan berbagai paket perjalanan yang dirancang khusus untuk memenuhi kebutuhan Anda, apakah itu petualangan outdoor, wisata budaya, atau relaksasi di resort. Setiap penginapan kami dilengkapi dengan fasilitas modern dan layanan yang ramah, menjamin kenyamanan Anda selama menginap. Dengan lokasi strategis dekat destinasi utama, kami memastikan liburan Anda berjalan mulus dan berkesan </p>
-                                        <a href="index-3.html" class="theme-btn btn-one">Selengkapnya</a>
+                                        <a href="#" class="theme-btn btn-one">Selengkapnya</a>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                                     <div class="image-box ml_130 pr_20 pb_20">
-                                        <figure class="image image-hov-two"><img src="assets/images/resource/history-1.jpg" alt=""></figure>
+                                        <figure class="image image-hov-two"><img src="{{ asset('assets/images/menu/service-1.jpg') }}" alt=""></figure>
                                     </div>
                                 </div>
                             </div>
@@ -206,7 +207,7 @@
                             <div class="row clearfix">
                                 <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                                     <div class="image-box mr_130 pl_20 pb_20">
-                                        <figure class="image image-hov-two"><img src="assets/images/resource/history-2.jpg" alt=""></figure>
+                                        <figure class="image image-hov-two"><img src="{{ asset('assets/images/menu/service-2.jpg') }}" alt=""></figure>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 content-column">
@@ -214,7 +215,7 @@
                                         <span class="year">Kulineran</span>
                                         <h2>Makanan Khas</h2>
                                         <p>Nikmati kelezatan kuliner khas yang memadukan cita rasa otentik dengan sentuhan modern. Dari hidangan tradisional yang menggugah selera hingga sajian lokal yang legendaris, kami menawarkan pengalaman kuliner yang dirancang khusus untuk memanjakan selera Anda. Pilih dari berbagai menu yang sesuai dengan selera, apakah Anda mencari makanan ringan, hidangan utama, atau dessert yang manis. Setiap sajian kami dibuat dengan bahan-bahan segar dan dipersiapkan oleh tangan ahli, menjamin kualitas di setiap gigitan. Dengan layanan pemesanan yang mudah dan cepat, Anda bisa menikmati kuliner khas kapan saja dan di mana saja. Kami siap memberikan pengalaman kuliner yang akan membuat Anda kembali lagi.</p>
-                                        <a href="index-3.html" class="theme-btn btn-one">Selengkapnya</a>
+                                        <a href="#" class="theme-btn btn-one">Selengkapnya</a>
                                     </div>
                                 </div>
                             </div>
@@ -229,12 +230,12 @@
                                             Selami keindahan kerajinan tangan yang dipenuhi dengan nilai seni dan budaya. Dari produk tradisional yang otentik hingga desain modern yang kreatif, kami menawarkan berbagai pilihan kerajinan yang dirancang khusus untuk memenuhi selera dan kebutuhan Anda. Setiap karya kami dibuat dengan penuh cinta dan keahlian oleh pengrajin terampil, menggunakan bahan berkualitas tinggi untuk memastikan keawetan dan keindahan. Temukan koleksi kami yang beragam, apakah itu perhiasan, dekorasi rumah, atau souvenir khas, yang akan menambah nilai estetika dan keunikan di setiap sudut. Dengan layanan pemesanan yang mudah dan cepat, Anda dapat membawa pulang keindahan kerajinan tangan kami kapan saja. Kami berkomitmen untuk memberikan pengalaman berbelanja yang memuaskan dan menggugah semangat kreativitas Anda.
 
                                         </p>
-                                        <a href="index-3.html" class="theme-btn btn-one">Selengkapnya</a>
+                                        <a href="#" class="theme-btn btn-one">Selengkapnya</a>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                                     <div class="image-box ml_130 pr_20 pb_20">
-                                        <figure class="image image-hov-two"><img src="assets/images/resource/history-1.jpg" alt=""></figure>
+                                        <figure class="image image-hov-two"><img src="assets/images/menu/service-4.jpg" alt=""></figure>
                                     </div>
                                 </div>
                             </div>
@@ -243,7 +244,7 @@
                             <div class="row clearfix">
                                 <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                                     <div class="image-box mr_130 pl_20 pb_20">
-                                        <figure class="image image-hov-two"><img src="assets/images/resource/history-2.jpg" alt=""></figure>
+                                        <figure class="image image-hov-two"><img src="assets/images/service/service-5.jpg" alt=""></figure>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 content-column">
@@ -253,7 +254,7 @@
                                         <p>
                                             Rasakan sensasi hiburan yang penuh keceriaan dan kebersamaan! Dari pertunjukan langsung yang menghibur hingga aktivitas interaktif yang menarik, kami menyediakan berbagai pilihan hiburan yang dirancang khusus untuk memenuhi selera Anda. Apakah Anda mencari konser musik yang spektakuler, pertunjukan teater yang memukau, atau acara keluarga yang seru, kami siap menyuguhkan pengalaman yang memikat hati. Setiap acara kami dipersembahkan dengan kualitas tinggi dan detail yang teliti, menjamin momen yang penuh kesan. Dengan akses mudah untuk pemesanan tiket dan informasi acara, Anda dapat merencanakan hiburan seru kapan saja. Bergabunglah dengan kami dan nikmati pengalaman hiburan yang akan membuat Anda kembali lagi!
                                             </p>
-                                        <a href="index-3.html" class="theme-btn btn-one">Selengkapnya</a>
+                                        <a href="#" class="theme-btn btn-one">Selengkapnya</a>
                                     </div>
                                 </div>
                             </div>
@@ -265,12 +266,12 @@
                                         <span class="year">Transportasi</span>
                                         <h2>Rental Kendaraan</h2>
                                         <p>Kami menyediakan berbagai pilihan transportasi yang siap menemani perjalanan Anda. Dari mobil keluarga hingga kendaraan premium, semua tersedia dengan harga terjangkau. Nikmati kenyamanan berkendara dengan armada kami yang terawat, dilengkapi dengan fitur keamanan dan kenyamanan terkini. Baik untuk keperluan bisnis, liburan, atau acara spesial, kami siap melayani kebutuhan transportasi Anda. Pesan sekarang dan rasakan kemudahan dalam bepergian!</p>
-                                        <a href="index-3.html" class="theme-btn btn-one">Selengkapnya</a>
+                                        <a href="/rental" class="theme-btn btn-one">Selengkapnya</a>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                                     <div class="image-box ml_130 pr_20 pb_20">
-                                        <figure class="image image-hov-two"><img src="assets/images/resource/history-1.jpg" alt=""></figure>
+                                        <figure class="image image-hov-two"><img src="assets/images/menu/service-3.jpg" alt=""></figure>
                                     </div>
                                 </div>
                             </div>

@@ -197,7 +197,7 @@
                                         <li><a href="/#about">About Us</a></li>
                                         <li><a href="/#layanan">Layanan</a></li>
 
-                                        <li><a href="#contact">Contact</a></li>
+                                        <li><a href="/#contact">Contact</a></li>
                                     </ul>
                                 </div>
                             </nav>
@@ -251,9 +251,10 @@
                                     <h3>About</h3>
                                 </div>
                                 <div class="widget-content">
-                                    <p>Lorem ipsum dolor sit amet consectetur diam ultricies leo etiam nibh tristique.
+                                    <p>Kabupaten Mamasa adalah salah satu kabupaten yang berada di Provinsi Sulawesi Barat, Indonesia.
                                     </p>
-                                    <p>odio feugiat vitae libero vestibu viverra elementum luctus.</p>
+
+                                    <p>Wilayah Mamasa dikenal dengan beberapa sebutan, yakni 'Kondosapata' Uai Sapalelean', artinya sepetak sawah yang luas, dengan air yang mengalir pada semua bagiannya.</p>
                                 </div>
                             </div>
                         </div>
@@ -264,11 +265,10 @@
                                 </div>
                                 <div class="widget-content">
                                     <ul class="links-list clearfix">
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="courses.html">Courses</a></li>
-                                        <li><a href="index-2.html">Historic Timeline</a></li>
-                                        <li><a href="index-2.html">Career</a></li>
-                                        <li><a href="index-2.html">Membership</a></li>
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="/#about">About Us</a></li>
+                                        <li><a href="/#layanan">Layanan</a></li>
+                                        <li><a href="/#contact">Contact</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -279,7 +279,7 @@
                                     <h3>Working Hours</h3>
                                 </div>
                                 <div class="widget-content">
-                                    <p>Tincidunt neque pretium lectus donec risus.</p>
+                                    <p>Kami dengan senang hati melayani Anda selama jam kerja berikut :</p>
                                     <ul class="schedule-list clearfix">
                                         <li>Mon - Fri: 9:00AM - 6:00PM</li>
                                         <li>Sat - Sun: 8:00AM - 4:00PM</li>
@@ -296,22 +296,22 @@
                                     <ul class="info-list clearfix">
                                         <li>
                                             <div class="icon-box"><i class="icon-3"></i></div>
-                                            Add: New Hyde Park, NY 11040
+                                            Add : Mamasa 91362, Sulawesi Barat.
                                         </li>
                                         <li>
                                             <div class="icon-box"><i class="icon-2"></i></div>
-                                            Email: <a href="mailto:example@info.com">example@info.com</a>
+                                            Email : <a href="mailto:example@info.com">MamasaTrip@example.com</a>
                                         </li>
                                         <li>
                                             <div class="icon-box"><i class="icon-5"></i></div>
-                                            Phone: <a href="tel:3336660000">333 666 0000</a>
+                                            Phone : <a href="tel:3336660000">+62 831-9955-4399 (Local)</a>
                                         </li>
                                     </ul>
                                     <ul class="social-links">
-                                        <li><a href="index-2.html"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="index-2.html"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="index-2.html"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="index-2.html"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -321,7 +321,7 @@
             </div>
             <div class="footer-bottom centred">
                 <div class="copyright">
-                    <p>Copyright 2024 by <a href="index-2.html">GolFer</a> All Right Reserved.</p>
+                    <p>Copyright 2024 &copy; All Right Reserved.</p>
                 </div>
             </div>
         </footer>

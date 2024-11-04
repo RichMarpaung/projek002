@@ -126,7 +126,7 @@
         <!-- shop-page-section end -->
 
 
-        <!-- cta-section -->
+        {{-- <!-- cta-section -->
         <section class="cta-section alternat-2 centred bg-color-2 pt_140 pb_150">
             <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-14.png);"></div>
             <div class="auto-container">
@@ -142,7 +142,7 @@
                 </div>
             </div>
         </section>
-        <!-- cta-section end -->
+        <!-- cta-section end --> --}}
 
         <script>
             document.addEventListener('DOMContentLoaded', function () {
